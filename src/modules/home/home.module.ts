@@ -28,6 +28,5 @@ import { CardComponent }     from '../../components/card/card.component';
 
 export class HomeModule {
   constructor() {
-    console.log('Home Module Loaded');
   }
 }

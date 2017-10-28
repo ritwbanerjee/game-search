@@ -31,6 +31,5 @@ const routes: Routes = [{
 
 export class HomeRoutingModule {
   constructor() {
-    console.log('router loaded');
   }
 }
