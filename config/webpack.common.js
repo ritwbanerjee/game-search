@@ -74,12 +74,6 @@ module.exports = {
   },
 
   plugins: [
-    // new WebpackMonitor({
-    //   capture: true, // -> default 'true'
-    //   target: '../monitor/myStatsStore.json', // default -> '../monitor/stats.json'
-    //   launch: true, // -> default 'false'
-    //   port: 3030, // default -> 8081
-    // }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(NODE_ENV)

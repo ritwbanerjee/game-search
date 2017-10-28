@@ -1,5 +1,5 @@
 {
-  "name": "hackerearth",
+  "name": "hacker-earth",
   "version": "1.0.0",
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
