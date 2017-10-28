@@ -12,10 +12,6 @@
     "test": "karma start karma.webpack.conf.js",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
-  "engines": {
-    "node": "6.11.2",
-    "npm": "3.10.10"
-  },
   "dependencies": {
     "@angular/animations": "4.3.1",
     "@angular/common": "4.3.1",
