@@ -16,7 +16,6 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
     new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
-      sourceMap: true,
       mangle: false
     }),
     new webpack.LoaderOptionsPlugin({
