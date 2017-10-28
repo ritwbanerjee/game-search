@@ -1,0 +1,59 @@
+@import '../../buildStyleSheets/index';
+.app-search {
+    height: 350px;
+
+    @media (max-width: 480px) {
+        height: 275px;
+    }
+    
+    background: #87e0fd; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.app-nav {
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        padding: 15px;
+        cursor: pointer;
+    }
+}
+
+.app-header {
+    font-size: 38px;
+    color: white;
+
+    .search-bar {
+        padding-left: 15px;
+        background-color: white !important;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+    }
+}
+
+.search-box-row {
+    .search-icon {
+        position: absolute;
+        right: 25px;
+        top: 12px;
+        font-size: 18px;
+        color: black;
+    }
+}
+
+.mobile-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

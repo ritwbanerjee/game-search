@@ -1,0 +1,33 @@
+<div class='app-search'>
+    <nav class='app-nav'>
+        <div class='container'>
+            <div class="nav-wrapper hide-on-small-only">
+                <img class='logo' (click)='navigateToHome()' src='https://rangde-gen.s3.ap-south-1.amazonaws.com/images/rangde-new/header/rangde-logo.svg'/>
+            </div>
+            <div class="nav-wrapper hide-on-med-and-up mobile-nav">
+                    <img class='logo' (click)='navigateToHome()' src='https://rangde-gen.s3.ap-south-1.amazonaws.com/images/rangde-new/header/rangde-logo.svg'/>
+                </div>
+        </div>
+    </nav>
+            
+    <div class='container center'>
+        <p class='app-header'>
+            Welcome to Game Hunt !!!
+        </p>
+        <div class='row search-box-row' [class.hide-container]="showSearch">
+            <div class='col s12 m8 offset-m2'>
+                <div class='col s12 m10 offset-m1' >
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <i class="fa fa-search search-icon" aria-hidden="true"></i>                      
+                            <input type='text' id='autocomplete-input' name="searchKeyword" [(ngModel)]='searchKeyword' class='autocomplete form-control search-bar' placeholder="Enter Name" (keyup.enter)="searchResult()">
+                            <i class="material-icons search-icon point"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        

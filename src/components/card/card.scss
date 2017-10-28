@@ -1,0 +1,12 @@
+@import '../../buildStyleSheets/index';
+
+.card {
+    .card-title, span {
+        color: black;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

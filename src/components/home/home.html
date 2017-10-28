@@ -1,0 +1,60 @@
+<header></header>
+<div class='container'>
+    <div class='row' *ngIf='filteredResults !== 0'>
+        <div class='col s12 m6'>
+            <div class="input-field col s12 m8">
+                <span class='header bold'>Sort By</span>
+                <select [(ngModel)]='sortOrder' (ngModelChange)='sort()'>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1" [value]='1'>ASCENDING</option>
+                    <option value="2" [value]='2'>DESCENDING</option>
+                    <option value="3" [value]='3'>Platform</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class='col s12 m6'>
+            <div class="input-field col s12 m8">
+                <span class='header bold'>Filter By</span>
+                <select [(ngModel)]='filterBy' (ngModelChange)='filter()'>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option *ngFor='let platform of platforms' [value]='platform'>{{platform}}</option>
+                </select>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class='row error-row'>
+        <div class='col s12 m4'>
+                <span>Showing <b>{{filteredResults}} </b> of <b>{{totalResults}}</b> Results</span>
+        </div>
+        <div class='col s12 m8'>
+                <span class='clear-filter' (click)='resetFilter()'><u>Clear Search Criteria</u></span>
+        </div>
+    </div>
+
+    <div class='row' *ngIf='filteredResults === 0'>
+        <span>Your Search - <b> {{queryParam}} </b> did not match any Games</span>
+        <p>Suggestions: </p>
+        <ol>
+            <li>
+                    Make sure that all words are spelled correctly
+            </li>
+            <li>
+                    Make sure that all words are spelled correctly
+            </li>
+            <li>
+                    Make sure that all words are spelled correctly
+            </li>
+            <li>
+                    Make sure that all words are spelled correctly
+            </li>
+        </ol>
+    </div>
+    
+    <div class='card-holder' *ngFor='let game of games'>
+        <card-component [game]='game'></card-component>
+    </div>
+    
+</div>
