@@ -4,7 +4,8 @@
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
     "postinstall": "npm run build",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --bail",
+    "build1": "rimraf dist && webpack --config config/webpack.prod.js --bail",
+    "build": "webpack-dev-server --inline --progress --port 3000", 
     "app": "webpack-dev-server --inline --progress --port 3000",
     "prestart": "npm run build",
     "start": "node server.js",
